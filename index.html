@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>That's My Popcorn</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .banner img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        
+        .page-layout {
+            display: flex;
+            min-height: calc(100vh - 200px);
+        }
+
+        
+        .sidebar {
+            width: 220px;
+            flex-shrink: 0;
+            background-color: #340E4A;
+            padding: 20px 0;
+        }
+
+        
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .sidebar a:hover {
+            background-color: #53236b;
+        }
+
+        
+        .sidebar a img {
+            display: block;
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        
+        .content {
+            flex: 1;
+            min-width: 0;
+            padding: 20px;
+        }
+
+        
+        @media screen and (max-width: 768px) {
+            .banner {
+                height: 160px;
+            }
+
+            .page-layout {
+                min-height: calc(100vh - 160px);
+            }
+
+            .sidebar {
+                width: 190px;
+            }
+
+            .sidebar a {
+                gap: 10px;
+                padding: 12px;
+                font-size: 15px;
+            }
+
+            .sidebar a img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        
+        @media screen and (max-width: 480px) {
+            .banner {
+                height: auto;
+                aspect-ratio: 3 / 1;
+                min-height: 100px;
+            }
+
+            .banner img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            .page-layout {
+                display: flex;
+                flex-direction: column;
+                min-height: 0;
+            }
+
+            
+            .sidebar {
+                width: 100%;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .sidebar a {
+                min-width: 0;
+                min-height: 58px;
+                padding: 10px;
+                gap: 8px;
+                font-size: 14px;
+                overflow-wrap: anywhere;
+                border-bottom: 1px solid #512064;
+            }
+
+            .sidebar a img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .content {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header class="banner">
+        <img src="trial.png" alt="That's My Popcorn Banner">
+    </header>
+
+    
+    <div class="page-layout">
+
+        
+        <nav class="sidebar">
+            <a href="anime.html">
+                <img src="anime.png" alt="Anime Icon">
+                <span>Anime</span>
+            </a>
+            <a href="movies.html">
+                <img src="movies.png" alt="Movies Icon">
+                <span>Movies</span>
+            </a>
+            <a href="tvseries.html">
+                <img src="tvseries.png" alt="TV Series Icon">
+                <span>TV Series</span>
+            </a>
+            <a href="intcomp.html">
+                <img src="intcomp.png" alt="Intcomp Activities Icon">
+                <span>Intcomp Activities</span>
+            </a>
+            <a href="about.html">
+                <img src="aboutme.jpeg" alt="About Me Icon">
+                <span>About Me</span>
+            </a>
+        </nav>
+
+        
+        <main class="content">
+            <!-- Add your page content here -->
+        </main>
+
+    </div>
+
+</body>
+</html>
